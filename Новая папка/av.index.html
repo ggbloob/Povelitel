@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт повелителя</title>
+    <link rel="stylesheet" href="av.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Экран приветствия -->
+        <div id="start-screen" class="screen active">
+            <div class="start-grid">
+                <!-- Левая колонка с изображением и текстом -->
+                <div class="start-left">
+                    <div class="start-image">
+                        <img src="ц2.jpg" alt="Образование и знания">
+                    </div>
+                    <div class="start-info-block">
+                        <h3>Васап</h3>
+                        <p>Руслан — величайшее существо из когда-либо существовавших на нашей планете; основатель рофла, смеха, шуток и пранков. Заслуженный царь ЛП, без которого никто не может прожить и дня; олицетворение секса, умнейший обитатель своей комнаты, а также человек, который mogает тебя, лоха ебаного. ХААХАХАХАХ
+
+ </p>
+                        <div class="info-tip">
+                            <span>Ч предлагаю тебе пройти тест и узнать насколько же ты готов общаться с РУСЛАНОМ и достоин ли ты его внимания в целом </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Правая колонка с описанием теста -->
+                <div class="start-right">
+                    <div class="card">
+                        <h1>📝 Проверь насколько ты дибил</h1>
+                        <div class="test-features">
+                            <div class="feature">
+                                <span class="feature-icon">1</span>
+                                <span>10 вопросов, ответив на которые наша система вычислит долбаеба и запретит доступ к Руслану</span>
+                            </div>
+                            <div class="feature">
+                                <span class="feature-icon">2</span>
+                                <span>Вы не ограничены по времени, поэтому можете юзать ИИ, а так же сайт википедии wikiSlan.ru</span>
+                            </div>
+                            <div class="feature">
+                                <span class="feature-icon">3</span>
+                                <span>Узнайте свой результат и поймите, что вы тупое уебище</span>
+                            </div>
+                        </div>
+                        <p>Тест состоит из 10 вопросов, даже самому занятому был(а)недавно хватит времени. В конце вы узнаете количество правильных ответов.</p>
+                        <button id="start-btn" class="btn btn-primary">Начать тест →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Экран с вопросами -->
+        <div id="quiz-screen" class="screen">
+            <div class="quiz-header">
+                <div class="progress-bar-container">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+                <div class="question-counter">
+                    Вопрос <span id="current-question">1</span> из <span id="total-questions">10</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 id="question-text">Загрузка вопроса...</h2>
+                <div id="answers-container" class="answers-container"></div>
+                <button id="next-btn" class="btn btn-primary" disabled>Далее →</button>
+            </div>
+        </div>
+
+        <!-- Экран с результатами -->
+        <div id="result-screen" class="screen">
+            <div class="card result-card">
+                <h1>🎉 Тест завершён!</h1>
+                <div class="result-stats">
+                    <div class="score-circle">
+                        <span id="score-percent" class="score-percent">0%</span>
+                    </div>
+                    <p class="score-text">
+                        Вы ответили правильно на <span id="correct-count">0</span> из <span id="total-count">10</span> вопросов
+                    </p>
+                </div>
+                <div id="result-message" class="result-message"></div>
+                <button id="restart-btn" class="btn btn-secondary">🔄 Пройти тест заново</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="av.js"></script>
+</body>
+</html>
